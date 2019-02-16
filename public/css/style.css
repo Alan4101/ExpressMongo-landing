@@ -1,0 +1,146 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+}
+a{
+    text-decoration: none;
+}
+
+/*nav-header*/
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+}
+.logo{
+    display: inline-block;
+    margin-top: 1.5em;
+    width: 100px;
+    height: 50px;
+    background: url("../img/slils1.jpg") no-repeat center;
+
+}
+.nav-menu{
+    position: relative;
+    margin: 1.5em;
+    float: right;
+}
+.nav-menu ul li{
+    padding: 0.7em;
+    list-style-type: none;
+    display: inline-block;
+}
+.nav-menu ul li a{
+    color: black;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: 'Roboto Slab', serif;
+}
+.nav-menu ul li a:hover, .nav-menu ul li a:active{
+    color: #10c9c3;
+}
+.wrapper{
+    width: 100%;
+}
+/*banner*/
+.banner-section{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: url('../img/banner1.png') no-repeat center;
+    background-size: cover;
+    height: 100vh;
+}
+.banner h1{
+    /*text-transform: uppercase;*/
+}
+.banner p{
+    margin: 2em 0;
+    color: #979792;
+}
+.btn-contact{
+    text-transform: uppercase;
+    color: #fff;
+    background: #10c9c3;
+    padding: 1em 1.5em;
+}
+/*about*/
+.about-section {
+    text-align: center;
+}
+.about{
+    margin: 5em 0;
+    text-align: center;
+}
+.sub-about{
+    margin: 1em auto;
+    width: 600px;
+    max-width: 100%;
+}
+.sub-about p{
+    color: #979792;
+}
+.pd img{
+    width: 300px;
+    max-width: 100%;
+}
+
+
+/*skills*/
+.skills-section{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap ;
+    background: #d1d1d01a;
+}
+.skills-img{
+    background: url("../img/01.jpg") no-repeat center;
+    background-size: cover;
+}
+.skills-list li{
+    list-style-type: none;
+}
+.text-skills{
+    text-transform: uppercase;
+}
+.line-skills{
+    display: block;
+    width: 80%;
+    height: 5px;
+    background: #bfbfbf;
+}
+.line-skills span{
+    display: block;
+    height: 4px;
+    background: #10c9c3;
+}
+.line-skills span{
+    width: 230px;
+}
+.skills-list li span{
+    margin: 1em 0;
+}
+.wrrap-block{
+    margin: 15em 0 ;
+}
+.wrrap-block h2{
+    margin: 2em;
+}
+/*number*/
+.numbers-section, .wrrap-work{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.numbers-section{
+    background: #10c9c3;
+    color: #ffffff;
+}
+.items-work img{
+    width: 100%;
+    object-fit: cover;
+}
