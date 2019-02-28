@@ -12,8 +12,10 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
 
-    <title>Portpholio</title>
+    <title>Portfolio</title>
 </head>
 <body>
 <!--header-->
@@ -37,6 +39,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="wrapper">
+    <!--BANNER SECTION-->
             <div class="banner-section ">
                 <div class="container">
                     <div class="row">
@@ -51,6 +54,7 @@
                 </div>
 
             </div>
+    <!--ABOUT SECTION-->
             <div class="about-section">
                 <div class="about">
                     <h2>About Us</h2>
@@ -62,8 +66,9 @@
                     </div>
                 </div>
             </div>
+    <!--SKILLS SECTION-->
             <div class="skills-section">
-                <div class="col-md-6"   >
+                <div class="col-lg-6 col-md-12"   >
                     <div class="wrrap-block">
                         <h2>Professional skills</h2>
                         <ul class="skills-list">
@@ -88,89 +93,200 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-6 skills-img"></div>
+                <div class="col-lg-6 col-md-12 skills-img"></div>
             </div>
+    <!--NUMBER SECTION-->
             <div class="numbers-section">
                 <div class="col-md-3 item-nums">
-                    <figure>
-                        <img src="" alt="">
-                        <figcaption></figcaption>
-                    </figure>
+                    <div class="text-content">
+                        <span><i class="fas fa-briefcase"></i></span>
+                        <div class="sub-text">
+                            <p>548</p>
+                            <p>Projects completed</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-3 item-nums">
-                    <figure>
-                        <img src="" alt="">
-                        <figcaption></figcaption>
-                    </figure>
+                    <div class="text-content">
+                        <span><i class="far fa-clock"></i></span>
+                        <div class="sub-text">
+                            <p>1850</p>
+                            <p>working hours</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-3 item-nums">
-                    <figure>
-                        <img src="" alt="">
-                        <figcaption></figcaption>
-                    </figure>
+                    <div class="text-content">
+                        <span><i class="far fa-star"></i></span>
+                        <div class="sub-text">
+                            <p>612</p>
+                            <p>positive feedback</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-3 item-nums">
-                    <figure>
-                        <img src="" alt="">
-                        <figcaption>
-                            <span>485</span>
-                            <span></span>
-                        </figcaption>
-                    </figure>
+                    <div class="text-content">
+                        <span><i class="far fa-heart"></i></span>
+                        <div class="sub-text">
+                            <p>735</p>
+                            <p>happy clients</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+    <!--WORK PROJECT-->
             <div class="work-section">
-                <div class="wrrap-work container-fluid">
-                    <div class="col-md-3 items-work">
-                        <img src="../img/work/01.jpg" alt="">
+                <div  class="swiper-container">
+                    <div id="w_wrapp" class="wrrap-work swiper-wrapper">
+                        <div class="col-md-3 col-sm-6 items-work sw-item">
+                            <img src="../img/work/01.jpg" alt="">
+                        </div>
+                        <div class="col-md-3 col-sm-6 items-work sw-item">
+                            <img src="../img/work/02.jpg" alt="">
+                        </div>
+                        <div class="col-md-3 col-sm-6 items-work sw-item">
+                            <img src="../img/work/03.jpg" alt="">
+                        </div>
+                        <div class="col-md-3 col-sm-6 items-work sw-item">
+                            <img src="../img/work/04.jpg" alt="">
+                        </div>
+                        <div class="col-md-3 col-sm-6 items-work sw-item">
+                            <img src="../img/work/05.jpg" alt="">
+                        </div>
+                        <div class="col-md-3 col-sm-6 items-work sw-item">
+                            <img src="../img/work/03.jpg" alt="">
+                        </div>
+                        <div class="col-md-3 col-sm-6 items-work sw-item">
+                            <img src="../img/work/07.jpg" alt="">
+                        </div>
+                        <div class="col-md-3 col-sm-6 items-work sw-item">
+                            <img src="../img/work/08.jpg" alt="">
+                        </div>
                     </div>
-                    <div class="col-md-3 items-work">
-                        <img src="../img/work/02.jpg" alt="">
-                    </div>
-                    <div class="col-md-3 items-work">
-                        <img src="../img/work/03.jpg" alt="">
-                    </div>
-                    <div class="col-md-3 items-work">
-                        <img src="../img/work/04.jpg" alt="">
-                    </div>
-                    <div class="col-md-3 items-work">
-                        <img src="../img/work/05.jpg" alt="">
-                    </div>
-                    <div class="col-md-3 items-work">
-                        <img src="../img/work/03.jpg" alt="">
-                    </div>
-                    <div class="col-md-3 items-work">
-                        <img src="../img/work/07.jpg" alt="">
-                    </div>
-                    <div class="col-md-3 items-work">
-                        <img src="../img/work/08.jpg" alt="">
-                    </div>
-
                 </div>
-                <button>Load more work</button>
+                <button class="btn load-more">load more work</button>
+            </div>
+    <!--SERVICE SECTION-->
+            <div class="work-process-section">
+                <h2>Our Work Process</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci commodi cupiditate doloribus eaque, earum error id laboriosam laborum mollitia nihil.</p>
+                <div class="video-box">
+                    <!--<video width="600" height="600" allowfullscreen="true" autoplay controls >-->
+                        <!--<source src="https://youtu.be/qVIwHGI2e1U" type="video/mp4">-->
+                    <!--</video>-->
+                    <!--<iframe width="80%" height="100%" src="https://youtu.be/qVIwHGI2e1U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+                </div>
             </div>
             <div class="services-section">
                 <div class="col-md-4 items-serv"></div>
             </div>
+    <!-- TESTIMONIALS SECTION-->
             <div class="testimonials-section"></div>
-            <div class="clients-section"></div>
-            <div class="clients-section"></div>
+    <!-- WORK SECTIONS -->
+            <div class="word-section">
+                <div class="swiper-container sw-c">
+                    <div class="swiper-wrapper ">
+                        <div class="swiper-slide item-phrase">
+                            <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. At aut cumque ex necessitatibus nisi officia ratione repellat voluptas? Beatae doloremque exercitationem laboriosam libero magnam nostrum placeat similique vel? Atque, non."</p>
+                            <p>Michel hopkins</p>
+                        </div>
+                        <div class="swiper-slide item-phrase">
+                            <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. At aut cumque ex necessitatibus nisi officia ratione repellat voluptas? Beatae doloremque exercitationem laboriosam libero magnam nostrum placeat similique vel? Atque, non."</p>
+                            <p>Michel hopkins</p>
+                        </div>
+                        <div class="swiper-slide item-phrase">
+                            <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. At aut cumque ex necessitatibus nisi officia ratione repellat voluptas? Beatae doloremque exercitationem laboriosam libero magnam nostrum placeat similique vel? Atque, non."</p>
+                            <p>Michel hopkins</p>
+                        </div>
+                        <div class="swiper-slide item-phrase">
+                            <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. At aut cumque ex necessitatibus nisi officia ratione repellat voluptas? Beatae doloremque exercitationem laboriosam libero magnam nostrum placeat similique vel? Atque, non."</p>
+                            <p>Michel hopkins</p>
+                        </div>
+                        <div class="swiper-slide item-phrase">
+                            <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. At aut cumque ex necessitatibus nisi officia ratione repellat voluptas? Beatae doloremque exercitationem laboriosam libero magnam nostrum placeat similique vel? Atque, non."</p>
+                            <p>Michel hopkins</p>
+                        </div>
+                        <div class="swiper-slide item-phrase">
+                            <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. At aut cumque ex necessitatibus nisi officia ratione repellat voluptas? Beatae doloremque exercitationem laboriosam libero magnam nostrum placeat similique vel? Atque, non."</p>
+                            <p>Michel hopkins</p>
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <!-- CLIENTS SECTUIN-->
+            <div class="clients-section">
+                <% if(files.length){%>
+                    <% files.forEach((file)=>{%>
+                        <div class="col-lg-3 col-md-3 col-sm-12 client-item">
+                            <img src=" <%=file %> "alt="">
+                        </div>
+                    <% })%>
+                <% }%>
+            </div>
+    <!-- NEAD-PROJECT SECTION-->
             <div class="need-project-section">
-                <form method="post">
-                    <input type="text" name="name" placeholder="Your name">
-                    <input type="email" name="email" placeholder="Your email">
-                    <input type="text" name="title" placeholder="Your title">
-                    <textarea name="txt_comment"></textarea>
-                </form>
+                <div class="project-form">
+                    <h2>Need a Project?</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi delectus dicta eaque expedita explicabo illo magni molestias, odit, porro qui quidem quisquam quos repellat rerum sed tempore totam voluptas, voluptatum.</p>
+                    <form class="form_project" method="post">
+                        <input class="info" type="text" name="name" placeholder="Your name">
+                        <input class="info" type="email" name="email" placeholder="Your Email">
+                        <input class="info" type="text" name="title" placeholder="Your Title">
+                        <textarea class="info" name="txt_comment" placeholder="Your Comment"></textarea>
+                        <button class="btn btn-send" type="submit">Send message</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 <!--footer-->
-<footer>
-
+<footer class="container-fluid">
+    <div class="footer-content">
+        <div class="row">
+            <div class="col col-lg-4 col-md-4 col-sm-12">
+                <h2>Piroll Design, Inc</h2>
+                <p style="color: #adadad;">Designed by ....</p>
+            </div>
+            <div class="col col-lg-3 col-md-3 col-sm-12 contact-nav">
+                <div class="info-item">
+                    <ul style="padding-left: 0">
+                        <li><a href="mailto:andrew@gmail.com">andrew@gmail.com</a></li>
+                        <li><a href="tel:+380982583515">+38 (098) 258 35 15</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col col-lg-3 col-md-3 col-sm-12 ">
+                <div class="info-item">
+                    <ul style="padding-left: 0">
+                        <li><a href="">Projects</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Career</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="">News</a></li>
+                        <li><a href="">Events</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">Legals</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col col-lg-2 col-md-2 col-sm-12 social-netw">
+                <ul style="padding-left: 0">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">linkedin</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </footer>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+<script src="../js/script.js"></script>
 </body>
 </html>
