@@ -1,24 +1,3 @@
-$(document).ready(function () {
-
-   function createMsg(name, email, title, commetn){
-       $.ajax({
-           url: '',
-           type: 'POST',
-           contentType: 'application/json',
-           data: JSON.stringify({
-               name: name,
-               email: email,
-               title: title,
-               txt_comment: commetn
-           }),
-           success: function () {
-               
-           }
-       })
-   }
-
-});
-
 let media = mql =>{
     const r_class = document.querySelectorAll('.sw-item');
     const w_wrapp = document.querySelector('#w_wrapp');

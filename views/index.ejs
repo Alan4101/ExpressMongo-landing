@@ -6,8 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Roboto+Slab" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
 
+    <link rel="stylesheet" href="css/style.css">
     <title>Portfolio</title>
 </head>
 <body>
@@ -48,7 +49,7 @@
                         <div class="col-md-5 banner">
                             <h1>We Design and Develop</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci deserunt eligendi et excepturi facilis, laborum nam recusandae? Ad doloremque doloribus eum harum</p>
-                            <button class="btn btn-contact">Contact us</button>
+                            <button class="btn btn-contact" data-toggle="modal" data-target="#contactPopup">Contact us</button>
                         </div>
                     </div>
                 </div>
@@ -138,50 +139,88 @@
             <div class="work-section">
                 <div  class="swiper-container">
                     <div id="w_wrapp" class="wrrap-work swiper-wrapper">
-                        <div class="col-md-3 col-sm-6 items-work sw-item">
-                            <img src="../img/work/01.jpg" alt="">
-                        </div>
-                        <div class="col-md-3 col-sm-6 items-work sw-item">
-                            <img src="../img/work/02.jpg" alt="">
-                        </div>
-                        <div class="col-md-3 col-sm-6 items-work sw-item">
-                            <img src="../img/work/03.jpg" alt="">
-                        </div>
-                        <div class="col-md-3 col-sm-6 items-work sw-item">
-                            <img src="../img/work/04.jpg" alt="">
-                        </div>
-                        <div class="col-md-3 col-sm-6 items-work sw-item">
-                            <img src="../img/work/05.jpg" alt="">
-                        </div>
-                        <div class="col-md-3 col-sm-6 items-work sw-item">
-                            <img src="../img/work/03.jpg" alt="">
-                        </div>
-                        <div class="col-md-3 col-sm-6 items-work sw-item">
-                            <img src="../img/work/07.jpg" alt="">
-                        </div>
-                        <div class="col-md-3 col-sm-6 items-work sw-item">
-                            <img src="../img/work/08.jpg" alt="">
-                        </div>
+                        <% if(file_work.length){ %>
+                        <% file_work.forEach((item) =>{ %>
+                            <div class="col-md-3 col-sm-6 items-work sw-item">
+                                <img src="<%=item %>" alt="">
+                            </div>
+                        <% }) %>
+                        <% } %>
                     </div>
                 </div>
                 <button class="btn load-more">load more work</button>
             </div>
     <!--SERVICE SECTION-->
-            <div class="work-process-section">
-                <h2>Our Work Process</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci commodi cupiditate doloribus eaque, earum error id laboriosam laborum mollitia nihil.</p>
-                <div class="video-box">
+            <!--<div class="work-process-section">-->
+                <!--<h2>Our Work Process</h2>-->
+                <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci commodi cupiditate doloribus eaque, earum error id laboriosam laborum mollitia nihil.</p>-->
+                <!--<div class="video-box">-->
                     <!--<video width="600" height="600" allowfullscreen="true" autoplay controls >-->
                         <!--<source src="https://youtu.be/qVIwHGI2e1U" type="video/mp4">-->
                     <!--</video>-->
-                    <!--<iframe width="80%" height="100%" src="https://youtu.be/qVIwHGI2e1U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
-                </div>
-            </div>
-            <div class="services-section">
-                <div class="col-md-4 items-serv"></div>
-            </div>
+                    <!--&lt;!&ndash;<iframe width="80%" height="100%" src="https://youtu.be/qVIwHGI2e1U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>&ndash;&gt;-->
+                <!--</div>-->
+            <!--</div>-->
     <!-- TESTIMONIALS SECTION-->
-            <div class="testimonials-section"></div>
+            <div class="testimonials-section">
+                <div class="col-lg-3 col-md-3 col-sm-12 ">
+                    <div class="tech-wrapper">
+                        <span><i class="far fa-gem"></i></span>
+                        <p>UI/Ux design</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 item-tsch">
+                    <div class="tech-wrapper">
+                        <span><i class="fas fa-code"></i></span>
+                        <p>web dewelopment</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 item-tsch">
+                    <div class="tech-wrapper">
+                        <span><i class="fas fa-mobile-alt"></i></span>
+                        <p>app/mobile</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 item-tsch">
+                    <div class="tech-wrapper">
+                        <span><i class="fas fa-gamepad"></i></span>
+                        <p>game design</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 item-tsch">
+                    <div class="tech-wrapper">
+                        <span><i class="fas fa-plane"></i></span>
+                        <p>seo/marketing</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 item-tsch">
+                    <div class="tech-wrapper">
+                        <span><i class="far fa-star"></i></span>
+                        <p>photography</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 item-tsch">
+                    <div class="tech-wrapper">
+                        <span><i class="fas fa-magic"></i></span>
+                        <p>graphic design</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 item-tsch">
+                    <div class="tech-wrapper">
+                        <span><i class="fas fa-fill-drip"></i></span>
+                        <p>illustration</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+
+            </div>
     <!-- WORK SECTIONS -->
             <div class="word-section">
                 <div class="swiper-container sw-c">
@@ -217,8 +256,8 @@
             </div>
             <!-- CLIENTS SECTUIN-->
             <div class="clients-section">
-                <% if(files.length){%>
-                    <% files.forEach((file)=>{%>
+                <% if(files_customer.length){%>
+                    <% files_customer.forEach((file)=>{%>
                         <div class="col-lg-3 col-md-3 col-sm-12 client-item">
                             <img src=" <%=file %> "alt="">
                         </div>
@@ -242,7 +281,7 @@
         </div>
     </div>
 </div>
-
+<%- include("popup"); %>
 <!--footer-->
 <footer class="container-fluid">
     <div class="footer-content">
@@ -288,5 +327,7 @@
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
 <script src="../js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<!--<script src="../js/method.js"></script>-->
 </body>
 </html>
