@@ -24,6 +24,37 @@ const swiper_phrases =  new Swiper('.sw-c', {
         el: '.swiper-pagination',
     },
 });
+
 mql.addListener(media);
 media(mql);
+
+const navBtn = document.querySelector('.nav-btn');
+const li = document.querySelectorAll('.nav-menu ul li');
+let flag = true;
+
+navBtn.addEventListener('click',()=>{
+
+    if(flag){
+        console.log('www');
+        for (let i = 0; i<li.length; i++) {
+           if(i&1){
+               //1
+                setTimeout(()=>{
+                    li[i].style.marginLeft = '100px';
+                    // li[i].style.opacity = 0;
+                }, 3000);
+               console.log(li[i]);
+           }else {
+               //2
+               setTimeout(()=>{
+                   li[i].style.marginRight = '100px';
+                   // li[i].style.opacity = 0;
+               }, 2000);
+           }
+       }
+       flag = false
+   }else {
+
+   }
+});
 

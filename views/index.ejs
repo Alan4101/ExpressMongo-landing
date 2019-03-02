@@ -20,43 +20,49 @@
 </head>
 <body>
 <!--header-->
-<header>
-    <nav class="container">
-        <div class="logo"></div>
-        <button style="display: none"></button>
-        <div class="nav-menu">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Work</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">testimonals</a></li>
-                <li><a href="#">contact</a></li>
-            </ul>
+<header id="home">
+    <!--BANNER SECTION-->
+    <div class="banner-section ">
+        <nav class="container-fluid">
+            <!--<div class="logo"></div>-->
+            <button class="nav-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#test">testimonals</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-5"></div>
+                <div class="col-md-2"></div>
+                <div class="col-lg-5 col-md-12 col-sm-12 banner">
+                    <h1>We Design and Develop</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci deserunt eligendi et excepturi facilis, laborum nam recusandae? Ad doloremque doloribus eum harum</p>
+                    <button class="btn btn-contact" data-toggle="modal" data-target="#contactPopup">Contact us</button>
+                </div>
+            </div>
         </div>
-    </nav>
+
+    </div>
+
 </header>
 <!--content-->
 <div class="container-fluid">
     <div class="row">
         <div class="wrapper">
-    <!--BANNER SECTION-->
-            <div class="banner-section ">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-5"></div>
-                        <div class="col-md-2"></div>
-                        <div class="col-md-5 banner">
-                            <h1>We Design and Develop</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci deserunt eligendi et excepturi facilis, laborum nam recusandae? Ad doloremque doloribus eum harum</p>
-                            <button class="btn btn-contact" data-toggle="modal" data-target="#contactPopup">Contact us</button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
     <!--ABOUT SECTION-->
-            <div class="about-section">
+            <div id="about" class="about-section text-center">
                 <div class="about">
                     <h2>About Us</h2>
                     <div class="sub-about">
@@ -68,13 +74,13 @@
                 </div>
             </div>
     <!--SKILLS SECTION-->
-            <div class="skills-section">
+            <div class="skills-section flex-container-0 flex-wrap">
                 <div class="col-lg-6 col-md-12"   >
                     <div class="wrrap-block">
                         <h2>Professional skills</h2>
                         <ul class="skills-list">
                             <li>
-                                <span class="text-skills">UI/UX Design 90%</span>
+                                <span class="text-uper">UI/UX Design 90%</span>
                                 <span class="line-skills">
                                     <span></span>
                                 </span>
@@ -97,9 +103,9 @@
                 <div class="col-lg-6 col-md-12 skills-img"></div>
             </div>
     <!--NUMBER SECTION-->
-            <div class="numbers-section">
+            <div class="numbers-section flex-container-1 flex-wrap bg-a">
                 <div class="col-md-3 item-nums">
-                    <div class="text-content">
+                    <div class="text-content flex-container-1">
                         <span><i class="fas fa-briefcase"></i></span>
                         <div class="sub-text">
                             <p>548</p>
@@ -108,7 +114,7 @@
                     </div>
                 </div>
                 <div class="col-md-3 item-nums">
-                    <div class="text-content">
+                    <div class="text-content flex-container-1">
                         <span><i class="far fa-clock"></i></span>
                         <div class="sub-text">
                             <p>1850</p>
@@ -117,7 +123,7 @@
                     </div>
                 </div>
                 <div class="col-md-3 item-nums">
-                    <div class="text-content">
+                    <div class="text-content flex-container-1">
                         <span><i class="far fa-star"></i></span>
                         <div class="sub-text">
                             <p>612</p>
@@ -126,7 +132,7 @@
                     </div>
                 </div>
                 <div class="col-md-3 item-nums">
-                    <div class="text-content">
+                    <div class="text-content flex-container-1">
                         <span><i class="far fa-heart"></i></span>
                         <div class="sub-text">
                             <p>735</p>
@@ -136,7 +142,7 @@
                 </div>
             </div>
     <!--WORK PROJECT-->
-            <div class="work-section">
+            <div id="work" class="work-section">
                 <div  class="swiper-container">
                     <div id="w_wrapp" class="wrrap-work swiper-wrapper">
                         <% if(file_work.length){ %>
@@ -148,21 +154,10 @@
                         <% } %>
                     </div>
                 </div>
-                <button class="btn load-more">load more work</button>
+                <button class="btn load-more text-uper">load more work</button>
             </div>
-    <!--SERVICE SECTION-->
-            <!--<div class="work-process-section">-->
-                <!--<h2>Our Work Process</h2>-->
-                <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci commodi cupiditate doloribus eaque, earum error id laboriosam laborum mollitia nihil.</p>-->
-                <!--<div class="video-box">-->
-                    <!--<video width="600" height="600" allowfullscreen="true" autoplay controls >-->
-                        <!--<source src="https://youtu.be/qVIwHGI2e1U" type="video/mp4">-->
-                    <!--</video>-->
-                    <!--&lt;!&ndash;<iframe width="80%" height="100%" src="https://youtu.be/qVIwHGI2e1U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>&ndash;&gt;-->
-                <!--</div>-->
-            <!--</div>-->
     <!-- TESTIMONIALS SECTION-->
-            <div class="testimonials-section">
+            <div id="test" class="testimonials-section flex-container-1 flex-wrap">
                 <div class="col-lg-3 col-md-3 col-sm-12 ">
                     <div class="tech-wrapper">
                         <span><i class="far fa-gem"></i></span>
@@ -222,75 +217,61 @@
 
             </div>
     <!-- WORK SECTIONS -->
-            <div class="word-section">
+            <div id="services" class="word-section bg-a text-center">
                 <div class="swiper-container sw-c">
                     <div class="swiper-wrapper ">
-                        <div class="swiper-slide item-phrase">
+                        <div class="swiper-slide item-phrase flex-container-0">
                             <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. At aut cumque ex necessitatibus nisi officia ratione repellat voluptas? Beatae doloremque exercitationem laboriosam libero magnam nostrum placeat similique vel? Atque, non."</p>
                             <p>Michel hopkins</p>
                         </div>
-                        <div class="swiper-slide item-phrase">
+                        <div class="swiper-slide item-phrase flex-container-0">
                             <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. At aut cumque ex necessitatibus nisi officia ratione repellat voluptas? Beatae doloremque exercitationem laboriosam libero magnam nostrum placeat similique vel? Atque, non."</p>
                             <p>Michel hopkins</p>
                         </div>
-                        <div class="swiper-slide item-phrase">
+                        <div class="swiper-slide item-phrase flex-container-0">
                             <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. At aut cumque ex necessitatibus nisi officia ratione repellat voluptas? Beatae doloremque exercitationem laboriosam libero magnam nostrum placeat similique vel? Atque, non."</p>
                             <p>Michel hopkins</p>
                         </div>
-                        <div class="swiper-slide item-phrase">
-                            <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. At aut cumque ex necessitatibus nisi officia ratione repellat voluptas? Beatae doloremque exercitationem laboriosam libero magnam nostrum placeat similique vel? Atque, non."</p>
-                            <p>Michel hopkins</p>
-                        </div>
-                        <div class="swiper-slide item-phrase">
-                            <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. At aut cumque ex necessitatibus nisi officia ratione repellat voluptas? Beatae doloremque exercitationem laboriosam libero magnam nostrum placeat similique vel? Atque, non."</p>
-                            <p>Michel hopkins</p>
-                        </div>
-                        <div class="swiper-slide item-phrase">
-                            <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. At aut cumque ex necessitatibus nisi officia ratione repellat voluptas? Beatae doloremque exercitationem laboriosam libero magnam nostrum placeat similique vel? Atque, non."</p>
-                            <p>Michel hopkins</p>
-                        </div>
-
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
-            <!-- CLIENTS SECTUIN-->
-            <div class="clients-section">
+    <!-- CLIENTS SECTUIN-->
+            <div class="clients-section flex-container-0 flex-wrap">
                 <% if(files_customer.length){%>
                     <% files_customer.forEach((file)=>{%>
-                        <div class="col-lg-3 col-md-3 col-sm-12 client-item">
+                        <div class="col-lg-3 col-md-3 col-sm-12 client-item text-center">
                             <img src=" <%=file %> "alt="">
                         </div>
                     <% })%>
                 <% }%>
             </div>
     <!-- NEAD-PROJECT SECTION-->
-            <div class="need-project-section">
+            <div id="contact" class="need-project-section text-center">
                 <div class="project-form">
                     <h2>Need a Project?</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi delectus dicta eaque expedita explicabo illo magni molestias, odit, porro qui quidem quisquam quos repellat rerum sed tempore totam voluptas, voluptatum.</p>
-                    <form class="form_project" method="post">
+                    <form class="form_project flex-container-1 flex-wrap" method="post">
                         <input class="info" type="text" name="name" placeholder="Your name">
                         <input class="info" type="email" name="email" placeholder="Your Email">
                         <input class="info" type="text" name="title" placeholder="Your Title">
                         <textarea class="info" name="txt_comment" placeholder="Your Comment"></textarea>
-                        <button class="btn btn-send" type="submit">Send message</button>
+                        <button class="btn btn-send text-center" type="submit">Send message</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<%- include("popup"); %>
 <!--footer-->
 <footer class="container-fluid">
     <div class="footer-content">
         <div class="row">
-            <div class="col col-lg-4 col-md-4 col-sm-12">
+            <div class="col col-lg-4 col-md-4 col-sm-12 text-center">
                 <h2>Piroll Design, Inc</h2>
                 <p style="color: #adadad;">Designed by ....</p>
             </div>
-            <div class="col col-lg-3 col-md-3 col-sm-12 contact-nav">
+            <div class="col col-lg-3 col-md-3 col-sm-12 flex-container-1 text-center">
                 <div class="info-item">
                     <ul style="padding-left: 0">
                         <li><a href="mailto:andrew@gmail.com">andrew@gmail.com</a></li>
@@ -298,8 +279,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="col col-lg-3 col-md-3 col-sm-12 ">
-                <div class="info-item">
+            <div class="col col-lg-3 col-md-3 col-sm-12 text-center">
+                <div class="info-item flex-container-1">
                     <ul style="padding-left: 0">
                         <li><a href="">Projects</a></li>
                         <li><a href="">About</a></li>
@@ -314,7 +295,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col col-lg-2 col-md-2 col-sm-12 social-netw">
+            <div class="col col-lg-2 col-md-2 col-sm-12 social-netw text-center">
                 <ul style="padding-left: 0">
                     <li><a href="#">Facebook</a></li>
                     <li><a href="#">Instagram</a></li>
@@ -325,6 +306,10 @@
         </div>
     </div>
 </footer>
+
+<%- include("popup"); %>
+
+<a class="up bg-a text-center" href="#home"><i class="fas fa-chevron-up"></i></a>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
 <script src="../js/script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
