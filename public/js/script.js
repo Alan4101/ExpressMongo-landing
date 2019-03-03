@@ -19,42 +19,48 @@ let media = mql =>{
 
 const mql = window.matchMedia("(min-width: 575px)");
 const swiper = new Swiper('.swiper-container');
-const swiper_phrases =  new Swiper('.sw-c', {
-    pagination: {
-        el: '.swiper-pagination',
-    },
-});
 
 mql.addListener(media);
 media(mql);
 
 const navBtn = document.querySelector('.nav-btn');
 const li = document.querySelectorAll('.nav-menu ul li');
-let flag = true;
+const nav = document.querySelector('.nav-menu');
+function animate(draw, duration) {
+    var start = performance.now();
 
+    requestAnimationFrame(function animate(time) {
+        // определить, сколько прошло времени с начала анимации
+        var timePassed = time - start;
+
+        // возможно небольшое превышение времени, в этом случае зафиксировать конец
+        if (timePassed > duration) timePassed = duration;
+
+        // нарисовать состояние анимации в момент timePassed
+        draw(timePassed);
+
+        // если время анимации не закончилось - запланировать ещё кадр
+        if (timePassed < duration) {
+            requestAnimationFrame(animate);
+        }
+
+    });
+}
+let flag = false;
 navBtn.addEventListener('click',()=>{
-
-    if(flag){
-        console.log('www');
-        for (let i = 0; i<li.length; i++) {
-           if(i&1){
-               //1
-                setTimeout(()=>{
-                    li[i].style.marginLeft = '100px';
-                    // li[i].style.opacity = 0;
-                }, 3000);
-               console.log(li[i]);
-           }else {
-               //2
-               setTimeout(()=>{
-                   li[i].style.marginRight = '100px';
-                   // li[i].style.opacity = 0;
-               }, 2000);
-           }
-       }
-       flag = false
-   }else {
-
-   }
+    if(!flag){
+        li.forEach( el => el.classList.remove('fadeOutRight', 'fadeOutLeft') );
+        nav.style.opacity = 1;
+        nav.classList.remove('fadeUp');
+        nav.classList.add('fadeIn');
+        flag = true;
+   }else if(flag){
+        li.forEach( (el,i) => {
+            return (i&1)? el.classList.add('fadeOutRight'): el.classList.add('fadeOutLeft');
+        });
+        nav.classList.remove('fadeIn');
+        nav.classList.add('fadeUp');
+        flag = false;
+    }
 });
 

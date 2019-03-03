@@ -3,11 +3,11 @@ const mongoose = require('mongoose');
 // lib for files
 const walk = require('walk');
 
-// const router = require('routes');
-// app.use('/api', router.post);
-// app.use('/api', router.msg);
-
 const app = express();
+
+const router = require('./routes');
+app.use('/api', router.msg);
+app.use('/api', router.post);
 
 // we get name files in img folder
 // arrays for name picture
@@ -27,6 +27,7 @@ walker_work.on('file',(root, stat, next)=>{
     file_work.push('../img/work/'+ stat.name);
     next();
 });
+
 //result array
 // walker.on('end', ()=> console.log(files));
 // walker_work.on('end', ()=> console.log(file_work));
@@ -47,6 +48,7 @@ mongoose.connection
         console.log(`Connected to ${info.host}:${info.port}/${info.name}`);
     });
 mongoose.connect('mongodb://localhost:27017/portfolio', {useNewUrlParser: true});
+
 //catch 404 and forward to error handler
 app.use((req, res, next)=>{
     const err = new Error('Not Found');

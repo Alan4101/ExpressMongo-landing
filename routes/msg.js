@@ -4,7 +4,7 @@ const router = express.Router();
 
 const models = require('../models');
 
-router.post('/msg/', jsonParser,(req, res)=>{
+router.post('/msg', jsonParser,(req, res)=>{
     if(!req.body) return res.sendStatus(400);
 
     const name = req.body.name;
@@ -17,7 +17,7 @@ router.post('/msg/', jsonParser,(req, res)=>{
     msg.save((err)=>{
         if(err) return console.log(err);
         res.send(msg);
-        console.log(`send sucsess ${msg}`);
+        // console.log(`send sucsess ${msg}`);
     })
 
 });

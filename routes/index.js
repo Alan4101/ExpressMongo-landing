@@ -1,7 +1,6 @@
-const msg = require('msg');
-const post = require('post');
+const msg = require('./msg');
+const post = require('./post');
 
 module.exports = {
-  msg,
-  post
+  post, msg
 };
