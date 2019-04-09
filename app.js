@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 // lib for files
 const walk = require('walk');
-
+const conf = require('./config');
 const app = express();
 
 const router = require('./routes');
@@ -56,6 +56,6 @@ app.use((req, res, next)=>{
     next(err);
 });
 
-app.listen(3000,()=> {
-    console.log('App listening on port 3000!');
+app.listen(conf.PORT,()=> {
+    console.log(`App listening on port ${conf.PORT}`);
 });

@@ -8,7 +8,7 @@
     "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Andrew Tolochkevitch",
   "license": "ISC",
   "dependencies": {
     "ejs": "^2.6.1",
@@ -17,5 +17,9 @@
     "mongoose": "^5.4.13",
     "nodemon": "^1.18.10",
     "walk": "^2.3.14"
+  },
+  "devDependencies": {
+    "dotenv": "^7.0.0",
+    "path": "^0.12.7"
   }
 }
