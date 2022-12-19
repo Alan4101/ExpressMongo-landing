@@ -1,3 +1,6 @@
-# Portfolio use NodeJs MongoDb
-## NodeJs
-#dfd
+# Landong  
+## Stack:
+Javascript
+NodeJs 
+MongoDb
+
